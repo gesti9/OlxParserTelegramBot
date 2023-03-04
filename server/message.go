@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"olx/pkg"
+	"strconv"
 
 	"github.com/PuerkitoBio/goquery"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
@@ -81,7 +82,7 @@ func Check(err error) {
 func DataBase(s string, chatId int64) {
 	c := New(pkg.BOT_TOKEN)
 
-	database, err := sql.Open("sqlite3", "./list.db")
+	database, err := sql.Open("sqlite3", "./listUrl"+strconv.Itoa(int(chatId))+".db")
 	Check(err)
 	defer database.Close()
 	statement, err := database.Prepare("CREATE TABLE IF NOT EXISTS olx (id INTEGER PRIMARY KEY, url TEXT)")
