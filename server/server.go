@@ -41,10 +41,13 @@ func Run() {
 				В появившемся меню вы можете выбрать тип объявлений который вы хотите мониторить
 				`
 			case "Мониторы":
+				res = "БОТ начал мониторинг"
 				go OlxCheck("Мониторы", update.Message.Chat.ID)
 			case "Моноблоки":
+				res = "БОТ начал мониторинг"
 				go OlxCheck("Моноблоки", update.Message.Chat.ID)
 			case "Системники":
+				res = "БОТ начал мониторинг"
 				go OlxCheck("Системники", update.Message.Chat.ID)
 			}
 
