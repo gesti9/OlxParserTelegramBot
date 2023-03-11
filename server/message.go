@@ -42,7 +42,8 @@ func OlxParser(s string, chatId int64) {
 		url = "https://www.olx.kz/d/elektronika/kompyutery-i-komplektuyuschie/monitory/astana/?search%5Border%5D=created_at:desc"
 	case "Моноблоки":
 		url = "https://www.olx.kz/d/elektronika/kompyutery-i-komplektuyuschie/nastolnye-kompyutery/astana/q-%D0%9C%D0%BE%D0%BD%D0%BE%D0%B1%D0%BB%D0%BE%D0%BA/?search%5Border%5D=created_at:desc"
-
+	case "Оптом электороника":
+		url = "https://www.olx.kz/d/elektronika/kompyutery-i-komplektuyuschie/astana/q-%D0%9E%D0%BF%D1%82%D0%BE%D0%BC/?search%5Border%5D=created_at:desc"
 	case "Системники":
 		url = "https://www.olx.kz/d/elektronika/kompyutery-i-komplektuyuschie/nastolnye-kompyutery/astana/?search%5Border%5D=created_at:desc"
 	}

@@ -16,6 +16,7 @@ var mainMenu = tgbotapi.NewReplyKeyboard(
 		tgbotapi.NewKeyboardButton("Мониторы"),
 		tgbotapi.NewKeyboardButton("Моноблоки"),
 		tgbotapi.NewKeyboardButton("Системники"),
+		tgbotapi.NewKeyboardButton("Оптом электороника"),
 	),
 )
 
@@ -49,6 +50,9 @@ func Run() {
 			case "Системники":
 				res = "БОТ начал мониторинг"
 				go OlxCheck("Системники", update.Message.Chat.ID)
+			case "Оптом электороника":
+				res = "БОТ начал мониторинг"
+				go OlxCheck("Оптом электороника", update.Message.Chat.ID)
 			}
 
 			msg := tgbotapi.NewMessage(update.Message.Chat.ID, res)
